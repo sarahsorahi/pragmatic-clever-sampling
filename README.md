@@ -6,40 +6,34 @@ This repository investigates how different sampling strategies for augmented dat
 
 ---
 
-## Motivation
-
-Two consistent observations motivate this work:
-
-1. Attested (real) data form a **stable pragmatic core** for each function in embedding space.
-2. Augmented (synthetic) data consistently improve classification performance, despite being more dispersed and less structurally coherent.
-
-These findings suggest that real data anchor pragmatic meaning, while augmented data mainly support learning by increasing coverage and stability. This repository tests whether augmentation works best when synthetic examples are selected **relative to the real-data core**, rather than used indiscriminately.
-
----
-
-## Task and Data
-
-- **Task:** Classification of discourse–pragmatic functions of *look*  
-  (e.g. INTJ, DM, DIR)
-- **Data:**
-  - Real (attested) examples
-  - Synthetic (augmented) examples
-- **Embeddings:** Transformer-based contextual embeddings
-- **Clustering:** HDBSCAN (used to identify cores, periphery, and noise)
-
----
-
-## Experimental Setup
-
-- Evaluation on **real data only**
-- **2-fold split** on real data
-- **5 random seeds**
-- **Macro F1** as the main evaluation metric
-- **Class-weighted cross-entropy loss** to address class imbalance and prevent minority-class collapse
-
----
-
 ## Sampling Strategies
 
 All sampling strategies keep the **same real training data** and differ only in how synthetic examples are selected.
+
+---
+
+### `core_anchored_sampling.py` (main strategy)
+Keeps:
+- all real data, and
+- only synthetic examples that are structurally aligned with the real-data core  
+  (e.g. non-noise points in clusters containing real examples).
+
+This strategy is directly motivated by the clustering results and serves as the primary experimental condition.
+
+---
+
+### `boundary_sampling.py`
+Selects synthetic examples near the **edges** of real-data clusters rather than the densest core, testing whether boundary cases help learning under sparsity.
+
+---
+
+### `cluster_balanced_sampling.py`
+Samples synthetic data evenly across clusters with per-cluster caps.  
+This serves as a control strategy to distinguish structural alignment effects from simple balancing effects.
+
+---
+
+### `noise_filtered_sampling.py`
+Removes synthetic examples labeled as noise by HDBSCAN, providing a minimal filtering baseline.
+
 
