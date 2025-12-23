@@ -11,6 +11,15 @@ This repository investigates how different sampling strategies for augmented dat
 All sampling strategies keep the **same real training data** and differ only in how synthetic examples are selected.
 
 ---
+### `base_sampling.py`
+Shared utilities for:
+- separating real vs. synthetic data,
+- enforcing synthetic-to-real ratios,
+- ensuring consistency across experiments.
+
+This file contains no experimental logic.
+
+---
 
 ### `core_anchored_sampling.py` 
 Keeps:
