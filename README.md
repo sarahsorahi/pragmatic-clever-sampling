@@ -12,7 +12,7 @@ All sampling strategies keep the **same real training data** and differ only in 
 
 ---
 
-### `core_anchored_sampling.py` (main strategy)
+### `core_anchored_sampling.py` 
 Keeps:
 - all real data, and
 - only synthetic examples that are structurally aligned with the real-data core  
