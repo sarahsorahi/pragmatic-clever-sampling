@@ -1,5 +1,6 @@
 # pragmatic-clever-sampling
 
+## Core Idea
 Clever Sampling for Pragmatic Data Augmentation
 This repository investigates how different sampling strategies for augmented data affect supervised classification of discourse–pragmatic functions. Rather than treating all synthetic data as equally useful, the project explores whether structure-aware sampling, informed by unsupervised clustering, can improve learning while preserving the pragmatic structure defined by real data.
 The work builds on two observations:
