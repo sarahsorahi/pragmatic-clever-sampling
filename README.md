@@ -42,7 +42,8 @@ The goal is to test whether selecting synthetic examples relative to the real-da
 All sampling strategies:
 - use the **same real training data**, and
 - differ only in how synthetic examples are selected.
-
+-
+##
 sampling/
 ├── base_sampling.py
 ├── core_anchored_sampling.py
