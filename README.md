@@ -2,7 +2,7 @@
 
 ## Understanding Why Augmented Data Improves Pragmatic Classification
 
-This repository investigates **why synthetic (augmented) data improve supervised classification of discourse–pragmatic functions**, even when such data do not reproduce the pragmatic structure observed in real usage. The focus is on the English lexical item *look* and its pragmatic functions: **Interjection (INTJ)**, **Discourse Marker (DM)**, **Directive (DIR)**, and **AS**.
+This repository investigates **why synthetic  data improve supervised classification of discourse–pragmatic functions**, even when such data do not reproduce the pragmatic structure observed in real usage. The focus is on the English lexical item *look* and its pragmatic functions: **Interjection (INTJ)**, **Discourse Marker (DM)**, **Directive (DIR)**, and **AS**.
 
 Rather than treating augmentation as uniformly beneficial, the project adopts a **structure-aware approach** that combines unsupervised clustering with controlled sampling strategies to isolate which types of synthetic examples contribute to performance gains.
 
