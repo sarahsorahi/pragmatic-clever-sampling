@@ -1,0 +1,30 @@
+Comparison of sampling conditions (mean ± std)
+
+Real-only:
+  Macro F1 = 0.448 ± 0.103
+  F1 INTJ = 0.040 ± 0.126
+  F1 DM = 0.558 ± 0.209
+  F1 DIR = 0.746 ± 0.033
+  Δ vs Real-only = +0.000
+
+Real + all synthetic:
+  Macro F1 = 0.544 ± 0.055
+  F1 INTJ = 0.252 ± 0.083
+  F1 DM = 0.719 ± 0.113
+  F1 DIR = 0.661 ± 0.085
+  Δ vs Real-only = +0.096
+
+Core-anchored:
+  Macro F1 = 0.538 ± 0.044
+  F1 INTJ = 0.067 ± 0.089
+  F1 DM = 0.771 ± 0.064
+  F1 DIR = 0.778 ± 0.034
+  Δ vs Real-only = +0.090
+
+Boundary-sampled:
+  Macro F1 = 0.448 ± 0.103
+  F1 INTJ = 0.040 ± 0.126
+  F1 DM = 0.558 ± 0.209
+  F1 DIR = 0.746 ± 0.033
+  Δ vs Real-only = +0.000
+
