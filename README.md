@@ -29,7 +29,7 @@ Unsupervised clustering was performed using transformer-based sentence embedding
 
 This stage is fully documented in the companion repository:
 
-👉 https://github.com/sarahsorahi/look-function-clustering
+ https://github.com/sarahsorahi/look-function-clustering
 
 ---
 
